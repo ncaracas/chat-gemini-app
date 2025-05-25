@@ -1,0 +1,112 @@
+.chat-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.chat-box {
+  height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  margin-bottom: 15px;
+}
+
+.mensagem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  max-width: 90%;
+  word-wrap: break-word;
+}
+
+.mensagem.user {
+  background-color: #d1e7dd;
+  align-self: flex-end;
+  margin-left: auto;
+  text-align: right;
+}
+
+.mensagem.bot {
+  background-color: #e2e3e5;
+  align-self: flex-start;
+  margin-right: auto;
+  text-align: left;
+}
+
+.icone {
+  margin-top: 3px;
+  font-size: 1.2rem;
+}
+
+.input-area {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: none;
+  font-size: 1rem;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.botoes {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.botoes button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.botoes button.limpar {
+  background-color: #dc3545;
+}
+
+.botoes button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .chat-container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .chat-box {
+    height: 300px;
+  }
+
+  .botoes {
+    flex-direction: column;
+  }
+
+  .botoes button {
+    width: 100%;
+  }
+}
